@@ -9,8 +9,6 @@ const setup = (props = {}) => {
 };
 
 describe('Headline Component', () => {
-  let wrapper;
-
   describe('Checking PropTypes', () => {
     it('Should not throw a warning', () => {
       const expectedProps = {
@@ -32,6 +30,8 @@ describe('Headline Component', () => {
   });
 
   describe('Have props', () => {
+    let wrapper;
+
     beforeEach(() => {
       const props = {
         header: 'Test Header',
@@ -55,7 +55,7 @@ describe('Headline Component', () => {
   describe('Have no props', () => {
     let wrapper;
     beforeEach(() => {
-      component = setup();
+      wrapper = setup();
     });
     it('Should not render', () => {
       const component = findByDataTestAttr(wrapper, 'headlineComponent');

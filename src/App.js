@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './components/header';
+import Headline from './components/headline';
+import './app.scss';
 const tempArr = [
   {
     fName: 'Jake',
@@ -11,8 +13,15 @@ const tempArr = [
 ];
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
+      <section className="main">
+        <Headline
+          header="Posts"
+          desc="Click here to display posts!"
+          tempArr={tempArr}
+        />
+      </section>
     </div>
   );
 }

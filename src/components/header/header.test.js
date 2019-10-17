@@ -8,17 +8,17 @@ const setup = (props = {}) => {
 };
 
 describe('Header Component', () => {
-  let component;
+  let wrapper;
   beforeEach(() => {
-    component = setup();
+    wrapper = setup();
   });
   it('Should render without errors', () => {
-    const wrapper = findByDataTestAttr(component, 'headerComponent');
+    const component = findByDataTestAttr(wrapper, 'headerComponent');
 
-    expect(wrapper.length).toBe(1);
+    expect(component.length).toBe(1);
   });
   it('Should render a logo', () => {
-    const logo = findByDataTestAttr(component, 'imgLogo');
+    const logo = findByDataTestAttr(wrapper, 'logoImg');
     expect(logo.length).toBe(1);
   });
 });

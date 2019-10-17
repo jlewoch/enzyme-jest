@@ -2,10 +2,10 @@ import { combineReducers } from 'redux';
 import { all, fork } from 'redux-saga/effects';
 
 // reducers
-import success from './api/successReducer';
+import posts from './posts/reducer';
 
-export const rootReducers = combineReducers({
-  success
+export const rootReducer = combineReducers({
+  posts
 });
 
 export function* rootSagas() {}
